@@ -1,0 +1,5 @@
+check program uptime with path "/etc/monit.d/scripts/uptime"
+ depends on udrv
+        if status > 0 then alert
+        alert hardware@dicecorp.com on { resource } with reminder on 4320 cycles
+

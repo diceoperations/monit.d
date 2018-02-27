@@ -1,0 +1,4 @@
+check device rootdrive with path /
+        if SPACE usage > 80% then alert
+        alert telephony@dicemobilemail.com
+        alert hardware@dicecorp.com

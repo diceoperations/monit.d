@@ -1,0 +1,19 @@
+#!/bin/bash
+
+loadcores=`cat /proc/cpuinfo | grep cores | awk '{print $4;exit}'`
+
+loadavg=`cat /proc/loadavg | awk '{print int ($1+0.5);exit}'`
+
+loadmain=$((loadavg/loadcores))
+if [ $loadmain -gt 0 ]
+
+then
+
+ exit 1
+
+else
+ 
+exit 0
+
+
+fi

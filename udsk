@@ -1,0 +1,8 @@
+check device udrive with path /u
+       depends on udrv
+       alert hardware@dicecorp.com on { resource } with reminder on 300 cycles
+       if space usage > 80% then alert	
+
+check file udrv with path /u/drivestatus
+      if does not exist then unmonitor
+

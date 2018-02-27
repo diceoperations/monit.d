@@ -1,0 +1,3 @@
+check program loadavg with path "/etc/monit.d/scripts/loadinfo"
+ 	if status > 0 for 3 cycles then alert
+        alert hardware@dicecorp.com on { resource } with reminder on 360 cycles
