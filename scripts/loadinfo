@@ -1,6 +1,6 @@
 #!/bin/bash
 
-loadcores=`cat /proc/cpuinfo | grep cores | awk '{print $4;exit}'`
+loadcores=`grep -c ^processor /proc/cpuinfo`
 
 loadavg=`cat /proc/loadavg | awk '{print int ($1+0.5);exit}'`
 
